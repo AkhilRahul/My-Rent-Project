@@ -18,6 +18,58 @@ ul{
 body{
     background-color: var(--bglcolor);
 }
+header{
+    z-index: 5;
+    position: sticky;
+    top:0px;
+    min-height: 40px;
+    background-color: var(--mycolor);
+    display: flex;
+    align-items:center;
+    color:var(--flcolor);
+
+}
+header>div{
+/*    border:1px solid red;*/
+    flex: 1;
+    margin: 0 10px;
+
+}
+header>div:nth-child(2){
+    flex:2;
+/*    border:1px solid red;*/
+    position: relative;
+    border-radius: 10px;
+    margin: 5px auto;
+    
+}
+header>div:nth-child(2):hover{
+box-shadow: 0px 0px 15px 5px white;
+}
+header>div:nth-child(2)::after{
+content: "\1F50D";
+font-size: calc(.8rem + .5vw);
+text-align: center;
+line-height: 45px;
+position: absolute;
+height: 45px;
+width: 45px;
+border-radius:0 10px 10px 0;
+background-color: #303841;
+top:0px;
+right: 0px;
+cursor: pointer;
+
+}
+header>div input[type="search"]{
+    border-radius: 10px;
+    width:100%;
+    height: 45px;
+    padding: 10px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
 
 nav>ul{
     min-height: 40px;
@@ -45,6 +97,7 @@ nav>ul>li ul{
     position: absolute;
     background-color: var(--bgdcolor);
     margin-top:2px;
+    z-index: 1;
 }
 nav li:hover >ul{
     display:block;  
@@ -79,13 +132,12 @@ footer{
 }
 footer>div{
     margin: 10px auto;
-/*     border:.5px solid white;*/
+     border:.5px solid white;
 }
 
 footer .footercard1{
     width: 20em;
     padding: 5px;
-   
 }
 footer .footercard2{
     width: 16em;
